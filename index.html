@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Raster Drawing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Web Raster Drawing</h1>
+
+    <div id="container">
+
+        <div id="toolbar">
+    
+            <label for="strokeColor">Choose a stroke color:</label>
+            <input type="color" id="strokeColor" value="#000000">
+            <br>
+            <label for="fillColor">Choose a fill color:</label>
+            <input type="color" id="fillColor" value="#000000">
+            <br>
+            <label for="lineWidth">Line width:</label>
+            <input type="number" id="lineWidth" value="5" min="1" max="25">
+            <br>
+    
+            <label for="shapePicker">Choose a shape:</label>
+            <div id="shapePicker">
+                <button id="ellipseBtn">
+                    <img src="media/ellipse.png" alt="Ellipse" width="30" height="30">
+                </button>
+                <button id="rectangleBtn">
+                    <img src="media/rectangle.png" alt="Rectangle" width="30" height="30">
+                </button>
+                <button id="lineBtn">
+                    <img src="media/line.png" alt="Line" width="30" height="30">
+                </button>
+            </div>
+            <br>
+
+            <label for="backgroundColorPicker">Background color:</label>
+            <input type="color" id="backgroundColorPicker" value="#ffffff">
+            <br>
+            
+            <label for="selectedFormat">Select format:</label>
+            <select id="selectedFormat">
+                <option value="jpeg">jpeg</option>
+                <option value="png">png</option>
+            </select>
+            <button id="saveBtn">Save picture</button>
+            <button id="clearBtn">Clear</button>
+       
+        </div>
+        
+        <canvas id="canvas" width="1000" height="700"></canvas>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
